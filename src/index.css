@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CodeLeap Network Design System */
+
+@layer base {
+  :root {
+    --background: 0 0% 87%;
+    --foreground: 0 0% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+
+    --primary: 232 71% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 20%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 46%;
+
+    --accent: 145 63% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 80%;
+    --input: 0 0% 80%;
+    --ring: 232 71% 55%;
+
+    --radius: 0.5rem;
+
+    --header: 232 71% 55%;
+    --header-foreground: 0 0% 100%;
+
+    --post-header: 232 71% 55%;
+    --post-header-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 disabled:bg-primary/50 disabled:cursor-not-allowed transition-colors;
+  }
+
+  .btn-success {
+    @apply bg-accent text-accent-foreground hover:bg-accent/90 disabled:bg-accent/50 disabled:cursor-not-allowed transition-colors;
+  }
+
+  .btn-danger {
+    @apply bg-destructive text-destructive-foreground hover:bg-destructive/90 transition-colors;
+  }
+
+  .btn-cancel {
+    @apply bg-white text-foreground border border-border hover:bg-muted transition-colors;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary;
+  }
+
+  .post-card {
+    @apply bg-card rounded-lg border border-border overflow-hidden;
+  }
+
+  .post-header {
+    @apply bg-primary text-primary-foreground px-6 py-4;
+  }
+
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/50 flex items-center justify-center z-50;
+  }
+
+  .modal-content {
+    @apply bg-card rounded-lg p-6 w-full max-w-md mx-4 shadow-lg;
+  }
+}
