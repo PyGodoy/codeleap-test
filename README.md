@@ -61,7 +61,8 @@ The focus is on clean UI, real-time updates, and proper state management.
 ## 📦 Running Locally
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/your-username/codeleap-test.git
+cd codeleap-test
 npm install
 npm run dev
+
