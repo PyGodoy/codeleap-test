@@ -1,75 +1,66 @@
-🚀 CodeLeap Project
+# 🚀 CodeLeap Project
 
-🔗 Live Demo: https://codeleap-mikaell.vercel.app/
+🔗 **Live Demo:** https://codeleap-mikaell.vercel.app/
 
-📌 Overview
+## 📌 Overview
 
-This project is a simple social feed application where users can create, view, edit, and delete posts. It follows frontend-only authentication logic using a username stored locally and communicates with a test administrative API to fetch and submit posts.
+This project is a social feed application where users can create, view, edit, and delete posts. The app uses frontend-only authentication by storing the username locally and communicates with a test administrative API to manage posts.
 
-The application focuses on clean UI/UX, real-time updates, and proper state handling.
+The focus is on clean UI, real-time updates, and proper state management.
 
-✨ Features
-🔐 Signup Modal
+---
 
-First screen is a modal asking for a username
+## ✨ Features
 
-Username is stored locally in the frontend
+### 🔐 Signup Modal
+- First screen is a modal asking for a username
+- Username is stored locally on the frontend
+- Continue button is disabled if the input is empty
 
-Continue button is disabled if the input is empty
+### 📝 Create Posts
+- Users can create new posts
+- Submit button is disabled if any field is empty
+- New posts appear automatically at the top of the list
 
-📝 Create Posts
+### 🔍 View Posts
+- Posts are fetched from a test admin API
+- Feed updates dynamically
 
-Users can create new posts
+### ✏️ Edit Posts
+- Only posts created by the logged-in user can be edited
+- Editing is done through a modal
 
-Submit button is disabled if any field is empty
+### 🗑️ Delete Posts
+- Only posts created by the logged-in user can be deleted
+- A confirmation modal appears before deletion
 
-New posts appear automatically at the top of the list
+### 🔒 Ownership Validation
+- Edit/Delete actions are visible only for the logged-in user (simple string check)
 
-🔍 View & Search Posts
+---
 
-Posts are fetched from a test admin API
+## 🧠 Business Rules
 
-Feed updates dynamically
+- Posts are ordered by most recent first
+- Buttons are disabled when required fields are empty
+- All confirmations and edits are handled via modals
+- Username persists in frontend storage during the session
 
-✏️ Edit Posts
+---
 
-Only posts created by the logged-in user can be edited
+## 🛠️ Tech Stack
 
-Editing is done through a modal
+- React
+- TypeScript
+- CSS / Styled Components
+- REST API Integration
+- Vercel Deployment
 
-🗑️ Delete Posts
+---
 
-Only posts created by the logged-in user can be deleted
+## 📦 Running Locally
 
-A confirmation modal appears before deletion
-
-🔒 Ownership Validation
-
-Edit/Delete buttons are shown only for the logged-in user (simple string comparison)
-
-🧠 Business Rules
-
-Posts are ordered by most recent first
-
-Buttons are disabled when required fields are empty
-
-All confirmation and edit flows are handled via modals
-
-Username persists during the session in frontend state/storage
-
-🛠️ Tech Stack
-
-React
-
-TypeScript
-
-CSS / Styled Components (or equivalent)
-
-REST API integration
-
-Vercel Deployment
-
-📦 How to Run Locally
+```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 npm install
